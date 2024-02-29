@@ -1,0 +1,88 @@
+.hide {
+  display: none;
+}
+.adminPropertyUser{
+  display: flex;
+  padding: 20px;
+  background-color: #fff;
+  justify-content: space-around;
+  box-shadow: 0 10px 31px 5px rgb(7 152 255 / 9%);
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in;
+  margin-top: 50px;
+}
+.adminPropertyUser:hover{
+  background-color: rgb(167, 246, 165);
+  box-shadow: 0 10px 31px 5px rgba(53, 53, 53, 0.09);
+}
+.userPropertyIcon{
+    font-size:80px;
+    padding:5px;
+    padding-left: 20px;
+}
+.userPropertyContent{
+  padding-left: 20px;
+  text-align: center;
+  margin: auto;
+  font-size:30px;
+  font-weight: 600;
+  border-left:2px solid rgb(44, 31, 31);
+  cursor: pointer;
+}
+
+
+/* # Password section  */
+.userChangePass{
+  margin-top:3rem;
+  margin-bottom: 2rem;
+}
+.userPasswordFrom{
+  padding: 20px;
+  background-color:rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0px 2px 20px rgba(10, 113, 89, 0.299);
+}
+
+
+/* # User Property List      */
+
+.userPropertyListUserAdmin h1 a{
+  font-size: 22px;
+  background-color:#0040ff;
+  margin-left: 20px;
+  padding: 5px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+
+}
+.userPropertyListUserAdmin h1 a:hover{
+  background-color:rgb(176, 224, 73);
+  color: rgb(0, 0, 0);
+  transition: all 0.2s ease-in;
+
+}
+/* .....................  */
+.closeButtonmain{
+  position: relative;
+}
+.loseButtonaction{
+  position: absolute;
+  bottom: -69px;
+  right: -9px;
+  background-color:rgb(119, 118, 118);
+  border-radius: 50%;
+}
+.loseButtonaction:hover{
+  background-color:rgb(247, 10, 10);
+  transition:all 0.2s ease-in;
+}
+
+@media screen and (max-width: 760px){
+  .loseButtonaction{
+    position:absolute;
+    bottom:0px;
+    right:0px
+  }
+}

@@ -1,0 +1,38 @@
+.footer69Section{
+    background-image: url("../../../images/FooterImages/footer1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+}
+.foter69DownDiv{
+    padding: 100px 0px;
+    background-image: linear-gradient(to right, #0000008c, #00000086);
+    color:rgb(214, 210, 210);
+    opacity: 0.9;
+    transition: 0.3s;
+    z-index: 200;
+    backdrop-filter: none;
+}
+.foter69DownDiv:hover{
+    opacity: 1;
+}
+
+.footer69Section a{
+    padding-left: 5px;
+    text-decoration: none;
+    color: rgb(199, 194, 194);
+}
+.footer69Section a:hover{
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+.footer69Section ul{
+    list-style: none;
+    padding-left: 0px;;
+}
+
+.footer69Section ul li:hover{
+     color: rgb(0, 245, 212);
+     
+}

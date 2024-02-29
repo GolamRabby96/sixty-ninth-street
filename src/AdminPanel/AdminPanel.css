@@ -1,0 +1,306 @@
+.AdminContentHeader{
+    margin-top:48px;
+    margin-bottom:30px;
+    text-shadow: 2px 2px 2px #000000a1;
+}
+.AdminOperationButtonA{
+    background: #00ff7e;
+    color:#020000;
+    padding: 5px;
+    border: none;
+    border-radius:3px
+}
+.AdminOperationButtonD{
+    background: #ff9d00;
+    color:#020000;
+    padding: 5px;
+    border: none;
+    border-radius:3px
+}
+.AdminOperationButtonA:hover{
+    background: #00fffbed;
+}
+.AdminOperationButtonD:hover{
+    background: #ff0000;
+}
+.sidebar20{
+     width:20%;
+}
+.sideDot18{
+    width:18%;
+}
+.mainpage80{
+    width:80%;
+}
+.sidebar6{
+    width:6%;
+}
+.mainpage94{
+    width:94%;
+}
+.sideDot5{
+    width:5%;
+}
+
+.transitionLeft{
+    transition: 0.5s ease all;
+}
+.transitionRight{
+    transition: 0.5s ease all;
+}
+.adminOpen{
+    border-radius: 8px 30px 30px 8px;
+    
+}
+.adminClosed{
+    border-radius: 30px 4px 4px 30px;
+}
+.MsideNav{
+    display: block;
+    position: relative;
+}
+.toggleButton{
+    position: absolute;
+    top: 0px;
+    right: -32px;
+    color: #00ff7e;
+    background-color: black;
+    padding: 11px;
+    
+    
+    cursor: pointer;
+}
+.toggleButton:hover{
+    color:#fafafa;
+}
+.sideNav{
+    background:black;
+    color: white;
+    position:fixed;
+    top:0;
+    left:0;
+    padding-left: 25px;
+    height:100vh;
+    box-sizing: border-box;
+    z-index: 3000;
+}
+.MsideNav::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .MsideNav::before{
+    content: "";
+    display: block;
+    clear: both;
+  }
+.mainAdminPage{
+    display: block;
+    padding-left:40px;
+    padding-top:30px;
+    height:100vh;
+    overflow-inline: scroll;
+}
+.mainAdminPage::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .mainAdminPage::before {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .mainAdminPageStart{
+    position:absolute;
+    width: 80%;
+    top:0;
+    right:0;
+    height:100vh;
+    box-sizing: border-box;
+    z-index: 1;
+    overflow:scroll;
+    box-sizing: border-box;
+  }
+
+.BrandName69{
+    padding:5px;
+    border-bottom: 1px solid gray;
+    margin-top:30px;
+    margin-bottom:20px;
+}
+.BrandName69 a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+.destopMenuStart ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.destopMenuStart ul li{
+    margin-top:20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.destopMenuStart ul li:hover{
+    padding-left: 10px;
+    background-color:#00ff806d;
+    cursor: pointer;
+    transition: 0.5s ease padding-left;
+}
+.menuIcon{
+    color:#00ff7e;
+    font-size: 20px;
+    padding: 10px;
+    transition: 0.5s ease all;
+}
+#menuName{
+    font-size: 16px;
+    transition: 1s ease all;
+}
+
+#menuName {
+    animation: cssAnimation 0s 0.6s forwards;
+    opacity: 0; 
+}
+  
+.MainContentAdmin{
+    box-sizing: border-box;
+}
+.mobileAdminMenubar{
+    display: none;
+}
+.menuItem{
+    cursor: pointer;
+}
+
+
+
+.AdminTableDiv{
+    max-width: 100%;
+    overflow: scroll;
+    box-sizing: border-box;
+    display: block
+  }
+  .AdminResponsiveTable {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid rgb(12, 6, 6);
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .AdminResponsiveTable th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .AdminResponsiveTable tr:nth-child(even){background-color: #f2f2f2}
+  .theadDark{
+    background-color: black;
+    color: white;
+  }
+
+
+  @keyframes cssAnimation {
+    to   { opacity: 1; }
+  }
+
+
+
+  @media screen and (max-width: 970px){
+
+    .sideNav{
+        padding-left: 10px;
+    }
+  }
+
+  @media screen and (max-width: 880px){
+
+    .sideNav{
+        padding-left: 5px;
+    }
+    .menuIcon{
+        font-size: 14px;
+        padding: 2px;
+        padding-right: 4px;
+    }
+    .mainAdminPage{
+        padding-left:10px;
+        padding-top:40px;
+    }
+    .toggleButton{
+        top: 0px;
+        right: -22px;
+        padding: 5px;
+        border-radius: 0px 4px 4px 0px;
+    }
+  }
+
+  @media screen and (max-width: 760px){
+    .sideNav{
+        padding-left: 0px;
+    }
+    .menuIcon{
+        font-size: 12px;
+        padding: 4px;
+        padding-right: 4px;
+    }
+    #menuName {
+        font-size: 12px;
+    }
+    .BrandName69{
+        padding: 1px;
+        font-size: 14px;
+        border-bottom: 1px solid gray;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .toggleButton{
+        top: 0px;
+        right: -22px;
+        padding: 5px;
+        border-radius: 0px 4px 4px 0px;
+    }
+    .mobileAdminMenubar{
+        display: block;
+    }
+    .MsideNav{
+        display: none;
+    }
+    .sidebar20{
+        width:0%;
+   }
+   .mainpage80{
+        width: 100%;
+        margin-top:50px;
+        box-sizing: border-box;
+    }
+    .mobileMenuCustomStyle ul li{
+        margin-top:30px;
+    }
+    .AdminContentHeader h1{
+        font-size: 22px;
+    }
+    .AdminResponsiveTable {
+        font-size:12px;
+    }
+    .userPropertyListUserAdmin h1 a{
+        font-size:14px;
+        padding:3px;
+    }
+    .userPropertyListUserAdmin h1 a i{
+        font-size:1px;
+        padding:3px;
+        margin-left: 10px;
+        border-radius: 4px;
+    }
+  }
