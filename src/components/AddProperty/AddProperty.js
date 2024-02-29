@@ -439,7 +439,12 @@ const AddProperty = () => {
                 </div>
               </div>
             </div>
-          
+            <div className="input_section">
+              <div className="label_wrapper">
+                <h6>Owner Number:</h6>
+              </div>
+              <div className="input_box">
+                <div className="input_field_wrapper">
                   <input
                     required
                     onBlur={handleTextData}
