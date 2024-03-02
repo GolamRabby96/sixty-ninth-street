@@ -23,7 +23,7 @@ const SinglePageProperty = () => {
   const { id } = useParams([]);
   useEffect(() => {
     window.scrollTo(0, 0);
-    fetch(`http://localhost:5000/api/findProperties/${id}`)
+    fetch(`https://sixty-nine-street-server.onrender.com/api/findProperties/${id}`)
       .then((res) => res.json())
       .then((data) => setSingleProperties(data.data[0]));
   }, []);
@@ -88,19 +88,6 @@ const SinglePageProperty = () => {
               />
               {singleProperties.city}
             </p>
-          </div>
-          <div className="single_property_labels_right">
-            <div className="price_label">$ {singleProperties.price}</div>
-            <div className="prop_btn">
-              <button>
-                <FontAwesomeIcon className="prop_btn_icon" icon={faShareAlt} />
-                Share
-              </button>
-              <button>
-                <FontAwesomeIcon className="prop_btn_icon " icon={faHeart} />
-                Add to favourites
-              </button>
-            </div>
           </div>
         </div>
 

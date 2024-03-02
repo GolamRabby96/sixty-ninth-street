@@ -44,7 +44,7 @@ const HomeLoanForm = () => {
     e.preventDefault();
     const loanData = { ...textData, ...fileData, ...user_Info };
     console.log(loanData);
-    fetch("http://localhost:5000/api/loanReq", {
+    fetch("https://sixty-nine-street-server.onrender.com/api/loanReq", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(loanData),

@@ -40,7 +40,7 @@ const SingleAgent = () => {
 	const [agent, setSingleAgent] = useState([]);
 	console.log(agent);
 	useEffect(() => {
-		fetch(`http://localhost:5000/api/singleAgent/${id}`)
+		fetch(`https://sixty-nine-street-server.onrender.com/api/singleAgent/${id}`)
 			.then((res) => res.json())
 			.then((data) => setSingleAgent(data.data[0]));
 	}, []);
@@ -80,10 +80,9 @@ const SingleAgent = () => {
 									</div>
 								</div>
 							</div>
-							<div className="col-12 col-sm-12 col-md-6">
+							<div className="col-12 col-sm-12 col-md-6 pt-5">
 								<div className="singleAgentInfoTop">
-									<h2>{agent.agent_name}</h2>
-									<div class="agent_position">{agent.agent_title}</div>
+									<h2 class="agent_position">{agent.agent_name} <span>{agent.agent_title}</span> </h2>
 									<div>
 										<span className=" singlePageTopIcon ">{phone}</span>
 										<span>{agent.agent_number}</span>
@@ -102,7 +101,7 @@ const SingleAgent = () => {
 									</div>
 									<div>
 										<span className="singlePageTopIcon ">{wallet}</span>
-										<span className="text-success">Fees - {agent.fees}/=</span>
+										<span className="agentFees">Fees - {agent.fees}/=</span>
 									</div>
 									<div></div>
 								</div>
@@ -149,15 +148,12 @@ const SingleAgent = () => {
 													<div class="card mb-3">
 														<div class="row g-0">
 															<div class="col-md-4">
-																<img class="img-fluid" src={agent.agent_image} alt="" />
+																<img class="img-fluid popUpagentImage" src={agent.agent_image} alt="" />
 															</div>
 															<div class="col-md-8">
 																<div class="card-body">
-																	<h5 class="card-title">{agent.agent_name}</h5>
-																	<p class="card-text">
-																	{agent.agent_title}
-																	</p>
-																	<p class="card-text text-info">
+																	<h5 class="card-title">{agent.agent_name} {agent.agent_title}</h5>
+																	<p class="card-text text-success">
 																	Agent Fees -{agent.fees}/=
 																	</p>
 																</div>
@@ -180,11 +176,11 @@ const SingleAgent = () => {
 									</div>
 								</div>
 							</div>
-							<h2>About Me</h2>
+							<h3>About Me</h3>
 							<p>{agent.agent_description}</p>
 						</div>
-						<div className="singleAgentContactForm">
-							<h2>Contact Me</h2>
+						<div className="singleAgentContactForm pt-5">
+							<h3>Contact Me</h3>
 							<form className="row singleAgentForm">
 								<div className="col-sm-12 col-md-4">
 									<div class="mb-3">

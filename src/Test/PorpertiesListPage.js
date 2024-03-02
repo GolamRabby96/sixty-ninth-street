@@ -5,7 +5,7 @@ import FilterPage from "./FilterPage";
 const PorpertiesListPage = () => {
   const [propertiesAll, setPropertiesAll] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/api/allProperty")
+    fetch("https://sixty-nine-street-server.onrender.com/api/allProperty")
       .then((res) => res.json())
       .then((data) => {
         setPropertiesAll(data.data);

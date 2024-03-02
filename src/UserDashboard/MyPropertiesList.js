@@ -16,7 +16,7 @@ const MyPropertiesList = () => {
 	console.log(personalData);
 	useEffect(() => {
 		fetch(
-			`http://localhost:5000/api/findPropertiesByEmail/${currentUser.user_email}`
+			`https://sixty-nine-street-server.onrender.com/api/findPropertiesByEmail/${currentUser.user_email}`
 		)
 			.then((res) => res.json())
 			.then((data) => setPersonalData(data.data));

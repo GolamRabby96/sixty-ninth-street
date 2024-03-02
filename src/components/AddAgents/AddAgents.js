@@ -5,8 +5,6 @@ const AddAgents = () => {
 	const [alertMessage, setAlert] = useState("");
 	const [agentInfo, setAgentInfo] = useState({});
 	const [AgentImg, setAgentImg] = useState({});
-	const [agent_image, setAgentImgUrl] = useState();
-	console.log(agentInfo);
 	const handleAgentForm = (e) => {
 		const data = { ...agentInfo };
 		data[e.target.name] = e.target.value;
@@ -40,7 +38,7 @@ const AddAgents = () => {
 		const agentData = { ...agentInfo, ...AgentImg };
 		// console.log(agentData);
 		if (AgentImg) {
-			fetch("http://localhost:5000/api/addAgent", {
+			fetch("https://sixty-nine-street-server.onrender.com/api/addAgent", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(agentData),

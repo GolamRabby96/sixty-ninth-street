@@ -12,40 +12,44 @@ const AddProperty = () => {
       localStorage.getItem("userInfo" || "not found")
     );
     setUser_Info(getUserInfo);
-  }, []);
-
-  console.log("consol from property", user_Info);
+  }, []);   
 
   const [textData, setTextData] = useState({});
-  const [fileData, setFileData] = useState({});
-  console.log("This is file data upload url",fileData)
+  const [fileData, setFileData] = useState({
+    image_one:"image_one",
+    image_two:"image_two",
+    image_three:"image_three"
+  });
   const [message, setMessage] = useState("");
   const handleTextData = (e) => {
     const newText = { ...textData };
     newText[e.target.name] = e.target.value;
     setTextData(newText);
   };
+  const image_one = "image_one";
+  const image_two = "image_two";
+  const image_three = "image_theree";
   const handleFileData = (e) => {
-    const newFile = { ...fileData };
-    console.log("This is f.........",fileData)
-    const formData = new FormData();
-    formData.append("file", e.target.files[0]);
-    formData.append("upload_preset", "cubeit");
-    formData.append("cloud_name", "cubeitstoreimage");
+    // const newFile = { ...fileData };
+    // console.log("This is f.........",fileData)
+    // const formData = new FormData();
+    // formData.append("file", e.target.files[0]);
+    // formData.append("upload_preset", "cubeit");
+    // formData.append("cloud_name", "cubeitstoreimage");
 
-    fetch("https://api.cloudinary.com/v1_1/cubeitstoreimage/image/upload", {
-      method: "POST",
-      body: formData,
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        newFile[e.target.name] = data.url;
-        setFileData(newFile);
-        console.log("image upload done");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    // fetch("https://api.cloudinary.com/v1_1/cubeitstoreimage/image/upload", {
+    //   method: "POST",
+    //   body: formData,
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     newFile[e.target.name] = data.url;
+    //     setFileData(newFile);
+    //     console.log("image upload done");
+    //   })
+    //   .catch((error) => {
+    //     console.error(error);
+    //   });
   };
 
   const handleSubmit = (e) => {
@@ -53,7 +57,7 @@ const AddProperty = () => {
 
     const totalData = { ...textData, ...fileData, ...user_Info };
     console.log("total Data", totalData);
-    fetch("http://localhost:5000/api/addProperty", {
+    fetch("https://sixty-nine-street-server.onrender.com/api/addProperty", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(totalData),

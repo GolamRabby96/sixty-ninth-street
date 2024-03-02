@@ -11,12 +11,13 @@ import "./Properties.css";
 
 const Properties = () => {
 	const [properties, setProperties] = useState([]);
+	console.log(properties,"Home page properties shoed");
 	useEffect(() => {
-		fetch("http://localhost:5000/api/allProperty")
+		fetch("https://sixty-nine-street-server.onrender.com/api/allProperty")
 			.then((res) => res.json())
 			.then((data) => setProperties(data.data));
 	}, []);
-	const sliced = properties.slice(2, 5);
+	const sliced = properties.slice(0, 2);
 
 	return (
 		<div className="mt-5">

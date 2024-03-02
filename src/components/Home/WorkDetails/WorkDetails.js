@@ -13,7 +13,6 @@ const WorkDetails = ({ Work }) => {
 							<img
 								src={Work.image}
 								class="card-img-top workDetails_wrapperimg"
-								alt="..."
 								alt="workdetails_logo"
 							/>
 							<div class="card-body">

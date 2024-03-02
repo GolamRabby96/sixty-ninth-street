@@ -63,7 +63,7 @@ const AgentList = () => {
 
   const [agent, setAgent] = useState([]);
   useEffect(() => {
-      fetch('http://localhost:5000/api/getAgent')
+      fetch('https://sixty-nine-street-server.onrender.com/api/getAgent')
       .then(res => res.json())
       .then( data => {
         // const cutAgent = data.slice(data.length - 5, data.length);

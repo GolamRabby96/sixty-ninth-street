@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
     if (tokenId.length) {
       axios({
         method: "POST",
-        url: "http://localhost:5000/api/googlelogin",
+        url: "https://sixty-nine-street-server.onrender.com/api/googlelogin",
         data: { tokenId: tokenId },
       }).then((response) => {
         console.log("Google signed in completed successfully", response);

@@ -68,8 +68,8 @@ const AgentsPage = () => {
                       alt="agent_image"
                     />
                     <div class="card-body">
-                      <h5 class="card-title">{agt.agent_name}</h5>
-                      <span className="RjAgentPageSpan">{agt.agent_title}</span>
+                      <h5 class="card-title">{agt.agent_name} <span className="RjAgentPageSpan">{agt.agent_title}</span></h5>
+                      
                       <p class="card-text pt-2 RjAgentPageP">
                         {agt.agent_description.substring(0, 40)} .......
                       </p>

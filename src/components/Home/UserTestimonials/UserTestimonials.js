@@ -52,7 +52,7 @@ var settings = {
 const UserTestimonials = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/api/getReviews")
+    fetch("https://sixty-nine-street-server.onrender.com/api/getReviews")
       .then((res) => res.json())
       .then((data) => {
         // const collect = data.data.length;

@@ -13,7 +13,7 @@ const UserReviews = () => {
 
   const handleUserSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:5000/api/addReview", {
+    fetch("https://sixty-nine-street-server.onrender.com/api/addReview", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(reviews),

@@ -6,7 +6,7 @@
   position: relative;
 }
 .singlePageTopIcon {
-  color: #777;
+  color: #3b024a;
   margin-right: 10px;
   font-size: 12px;
   background: #f2f2f2;
@@ -19,15 +19,17 @@
   border-radius: 50%;
   margin-bottom: 5px;
 }
-.agent_position {
-  font-size: 13px;
+.agent_position span{
   margin: 0px 0px 10px 0px;
   line-height: 13px;
-  color: #777;
+  color: #044415;
 }
-
+.agentFees{
+  color: rgb(2, 88, 26);
+  font-weight: bold;
+}
 .sellHomeSideImg2 {
-  height: 250px;
+height: 250px !important;
   position: relative;
   padding: 5px;
   margin-bottom: 120px;
@@ -35,8 +37,8 @@
 .singleAgentImg {
   position: relative;
 }
-.singleAgentImg2 img {
-  height: 200px;
+.singleAgentImg img {
+  height: 350px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -111,4 +113,8 @@
 .HireMeButton{
   padding:0px 20%;
   margin:20px 0px;
+}
+.popUpagentImage{
+  width: 150px;
+  height: 100px;
 }

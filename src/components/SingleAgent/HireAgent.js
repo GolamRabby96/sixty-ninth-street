@@ -12,7 +12,7 @@ const HireAgent = () => {
 
 
 	const handlepayment = (paymentId) => {
-		fetch("http://localhost:5000/api/addHireAgents", {
+		fetch("https://sixty-nine-street-server.onrender.com/api/addHireAgents", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body:JSON.stringify(user_Info) 
