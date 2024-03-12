@@ -6,7 +6,7 @@ const ManageLoans = () => {
 	const [operationUpdate, setOperation] = useState();
 	console.log(loan);
 	useEffect(() => {
-		fetch("http://localhost:5000/api/getAllLoan").then(
+		fetch("https://sixty-nine-street-server.onrender.com/api/getAllLoan").then(
 			(res) =>
 				res
 					.json()
@@ -16,14 +16,14 @@ const ManageLoans = () => {
 	}, [operationUpdate]);
 
 	const handleApproved = (id) => {
-		fetch(`http://localhost:5000/api/updateStatus/${id}`, {
+		fetch(`https://sixty-nine-street-server.onrender.com/api/updateStatus/${id}`, {
 			method: "PUT",
 			headers: { "Content-Type": "application/json" },
 		}).then((res) => res.json().then((data) => setOperation(data)));
 	};
 
 	const handleDelete = (id) => {
-		fetch(`http://localhost:5000/api/delete/${id}`, {
+		fetch(`https://sixty-nine-street-server.onrender.com/api/delete/${id}`, {
 			method: "DELETE",
 		})
 			.then((res) => res.json())

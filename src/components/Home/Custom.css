@@ -6,8 +6,8 @@
 
 .footer_section {
   display: flex;
-  justify-content: flex-center;
-  align-items: flex-center;
+  justify-content: center;
+  align-items: center;
   padding: 110px 0;
 }
 .company_header {
@@ -71,7 +71,7 @@
 .contact_wrapper {
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-center;
+  align-items: center;
   height: 90vh;
   background-image: url("../../images/bg234.jpg");
   background-repeat: no-repeat;
@@ -101,8 +101,8 @@
   /* background-color: #fff; */
   display: flex;
   flex-direction: column;
-  justify-content: flex-center;
-  align-items: flex-center;
+  justify-content: center;
+  align-items: center;
 }
 .group {
   position: relative;
@@ -188,8 +188,8 @@ input:focus ~ .bar:after {
   width: 100%;
   /* height: 100vh; */
   display: flex;
-  justify-content: flex-center;
-  align-items: flex-center;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 .login_card {
@@ -199,7 +199,7 @@ input:focus ~ .bar:after {
   border-radius: 5px;
   box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
   display: flex;
-  align-items: flex-center;
+  align-items: center;
   flex-direction: column;
   font-family: "Roboto Slab";
   font-weight: 100;
@@ -209,13 +209,13 @@ input:focus ~ .bar:after {
 .login_header {
   text-align: center;
   display: flex;
-  justify-content: flex-center;
-  align-items: flex-center;
+  justify-content: center;
+  align-items:center;
 }
 .login_button_wrap {
   display: flex;
-  justify-content: flex-center;
-  align-items: flex-center;
+  justify-content: center;
+  align-items: center;
 }
 .login_button_wrap button {
   border: none;
@@ -238,8 +238,8 @@ input:focus ~ .bar:after {
   height: 20%;
   text-align: center;
   display: flex;
-  justify-content: flex-center;
-  align-items: flex-center;
+  justify-content: center;
+  align-items: center;
 }
 
 .social_wrapper {
@@ -384,7 +384,7 @@ input:focus ~ .bar:after {
 }
 .title {
   display: flex;
-  align-items: flex-center;
+  align-items: center;
   justify-content: space-between;
 }
 .content {
@@ -395,7 +395,7 @@ input:focus ~ .bar:after {
 .property_details_content {
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-center;
+  align-items: center;
   font-family: "Roboto";
   padding-top: 10px;
 }
@@ -427,8 +427,8 @@ input:focus ~ .bar:after {
 }
 .owner_details_section {
   display: flex;
-  justify-content: flex-center;
-  align-items: flex-center;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   background-color: #fff;
   width: 30%;
@@ -490,7 +490,7 @@ input:focus ~ .bar:after {
 }
 .ckeckbox_wrapper {
   display: flex;
-  align-items: flex-center;
+  align-items: center;
   width: 70%;
   margin: 0 60px;
 }
@@ -517,13 +517,30 @@ input:focus ~ .bar:after {
 .input_section {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-center;
+  align-items: center;
   width: 100%;
   margin-top: 10px;
 }
 .input_field {
   width: 80%;
 }
+.summitButton {
+  display: flex;
+  align-items: center;
+  justify-content:end;
+} 
+.summitButton button {
+  padding: 0px 50px;
+  transition: all 0.5s ease;
+  background-color: #1da0f2;
+} 
+.summitButton button:hover {
+  padding: 0px 100px;
+  color: white;
+  font-weight: bolder;
+  background-color: #092637;
+  transition: all 0.5s ease;
+} 
 /* AddProperty */
 
 
@@ -536,7 +553,7 @@ input:focus ~ .bar:after {
   .contact_wrapper {
     display: flex;
     justify-content: space-evenly;
-    align-items: flex-center;
+    align-items: center;
     flex-direction: column;
     height: 100%;
   }

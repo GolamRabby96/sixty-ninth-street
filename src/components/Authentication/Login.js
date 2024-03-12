@@ -43,12 +43,12 @@ const Login = () => {
     <div className="login_wrapper">
       <div className="login_card">
         <div className="login_header">
-          <h4>
+          <h6>
             <span> Welcome to </span>
             <br /> Sixty Ninth Street
-          </h4>
+          </h6>
         </div>
-        <h5 className="text-center mb-4">Sign in to your account</h5>
+        <h5 className="text-center mb-4 text-success">Sign in to your account</h5>
         {error && <alert variant="danger">{error}</alert>}
         <form onSubmit={handleSubmit} className="login_content">
           <div class="group">

@@ -59,7 +59,7 @@ const PropertiesList = () => {
 		setTextData(newText);
 
 		fetch(
-			"http://localhost:5000/api/findMultipleProperties",
+			"https://sixty-nine-street-server.onrender.com/api/findMultipleProperties",
 			{
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
@@ -186,7 +186,7 @@ const PropertiesList = () => {
 											<div class="col-sm-12 col-md-8 pt-2">
 												<div class="card-body">
 													<h5 class="fw-bold">{pro.property_name}</h5>
-													<h6 class="fw-bold mb-2 text-info">
+													<h6 class="fw-bold mb-2 text-success">
 														$ {pro.price}{" "}
 														<span class="Price_Is">[ {pro.price_is} ]</span>{" "}
 													</h6>

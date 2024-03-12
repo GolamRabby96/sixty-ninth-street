@@ -10,14 +10,14 @@ import {
 const UserProperties = () => {
   const [properties, setProperties] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/api/allProperty")
+    fetch("https://sixty-nine-street-server.onrender.com/api/allProperty")
       .then((res) => res.json())
       .then((data) => setProperties(data.data));
   }, []);
 
   const deleteProperties = (id) => {
     fetch(
-      `http://localhost:5000/api/deleteProperties/${id}`,
+      `https://sixty-nine-street-server.onrender.com/api/deleteProperties/${id}`,
       {
         method: "DELETE",
       }

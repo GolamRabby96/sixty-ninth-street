@@ -72,14 +72,15 @@
   margin-bottom: 30px !important;
   max-width: 100%;
   border: none;
-  background-color: #851818e6;
-  color: white;
+  background-color: #d5d4d4e6;
+  color: rgb(0, 0, 0);
+  box-shadow: 2px 2px 10px gray;
 }
 
 .RjPropertiseCard:hover {
-  box-shadow: 0px 0px 20px #c0c0c0;
+  box-shadow: 0px 0px 10px #76bc64;
   transition: ease 0.6s all;
-  background-color: #851818fb;
+  background-color: #1f1e1e2d;
 }
 
 .RjPropertiesImg {
@@ -108,7 +109,7 @@
   min-height:180px;
   max-height:180px;
   box-sizing: border-box;
-  border-left: 2px solid red;
+  border-left: 2px solid rgb(47, 0, 177);
 }
 
 .card-title {
@@ -135,7 +136,7 @@
   transition: ease 0.6s all;
 }
 .Price_Is{
-  color:#e4ff00b3;
+  color:#000000b3;
 }
 
 /* Latest Listing */

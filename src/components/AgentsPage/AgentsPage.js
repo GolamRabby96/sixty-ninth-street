@@ -21,7 +21,7 @@ const AgentsPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    fetch("http://localhost:5000/api/getAgent")
+    fetch("https://sixty-nine-street-server.onrender.com/api/getAgent")
       .then((res) => res.json())
       .then((data) => setAgent(data.data));
   }, []);

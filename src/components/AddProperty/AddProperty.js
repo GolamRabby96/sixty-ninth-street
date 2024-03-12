@@ -15,41 +15,34 @@ const AddProperty = () => {
   }, []);   
 
   const [textData, setTextData] = useState({});
-  const [fileData, setFileData] = useState({
-    image_one:"image_one",
-    image_two:"image_two",
-    image_three:"image_three"
-  });
+  const [fileData, setFileData] = useState({image_one:"",image_two:"",image_three:""});
   const [message, setMessage] = useState("");
   const handleTextData = (e) => {
     const newText = { ...textData };
     newText[e.target.name] = e.target.value;
     setTextData(newText);
   };
-  const image_one = "image_one";
-  const image_two = "image_two";
-  const image_three = "image_theree";
   const handleFileData = (e) => {
-    // const newFile = { ...fileData };
-    // console.log("This is f.........",fileData)
-    // const formData = new FormData();
-    // formData.append("file", e.target.files[0]);
-    // formData.append("upload_preset", "cubeit");
-    // formData.append("cloud_name", "cubeitstoreimage");
+    const newFile = { ...fileData };
+    console.log("This is f.........",fileData)
+    const formData = new FormData();
+    formData.append("file", e.target.files[0]);
+    formData.append("upload_preset", "cubeit");
+    formData.append("cloud_name", "cubeitstoreimage");
 
-    // fetch("https://api.cloudinary.com/v1_1/cubeitstoreimage/image/upload", {
-    //   method: "POST",
-    //   body: formData,
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     newFile[e.target.name] = data.url;
-    //     setFileData(newFile);
-    //     console.log("image upload done");
-    //   })
-    //   .catch((error) => {
-    //     console.error(error);
-    //   });
+    fetch("https://api.cloudinary.com/v1_1/cubeitstoreimage/image/upload", {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        newFile[e.target.name] = data.url;
+        setFileData(newFile);
+        console.log("image upload done",newFile);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   const handleSubmit = (e) => {
@@ -475,16 +468,17 @@ const AddProperty = () => {
                 </div>
               </div>
             </div>
-            <div className="input_section p-5">
-              <button type="submit" className="btn btn-info container">
+            <div className="input_section p-5 summitButton">
+              <button type="submit" className="btn ">
                 Done
               </button>
             </div>
             {alertMessage && (
-              <div className="col-md-11 p-1 mt-2">
-                <p className="shadow text-center bg-info">{alertMessage}</p>
+                <div className="col-md-4 offset-md-4  mt-2">
+                <p className="shadow text-center bg-warning p-2">{alertMessage}</p>
               </div>
             )}
+            
           </form>
         </div>
       </div>
